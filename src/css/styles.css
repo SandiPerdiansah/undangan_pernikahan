@@ -38,7 +38,7 @@ body.scrollable {
 /*navbar*/
 nav {
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 1.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1016,7 +1016,7 @@ footer .footer_copyright div i {
     /*Hero section*/
     /*bride section*/
     .bride, .gap_bride, .date, .galeri, .wishas, footer {
-        padding: 6rem 1.4rem;
+        padding: 4rem 1.4rem;
     }
 
     .bride h2 {
@@ -1137,7 +1137,7 @@ footer .footer_copyright div i {
     }
 
     .galeri .galeri_modal {
-        padding: 1.4rem;
+        padding: 1.4rem 1.4rem 4rem;
     }
 
     .galeri .galeri_modal .container_modal {

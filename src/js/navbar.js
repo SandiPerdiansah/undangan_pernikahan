@@ -33,4 +33,8 @@ export const navbar = () => {
                     <span>${data.teks}</span>
                 </a>`;
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        links[0].classList.add('active');
+    });
 }

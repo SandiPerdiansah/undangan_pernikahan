@@ -11,7 +11,7 @@ export const galeri = () => {
     let intervalId;
 
     data.galeri.map((item, index) => {
-        galeriBox.innerHTML += `<img src="${item.img}" alt="ARDI & ICHA" data-id="${item.id}" style="display: ${index === 0 ? 'block' : 'none'};">`;
+        galeriBox.innerHTML += `<img src="${item.img}" alt="ARDI & ICHA" data-id="${item.id}" style="display: ${index === 0 ? 'block' : 'none'};" >`;
         pagination.innerHTML += `<div class="pagination_item ${index === 0 ? 'active' : ''}" data-index="${index}"></div>`;
         containerModal.innerHTML += `<img src=${item.img} alt="ARDI & ICHA">`;
     })

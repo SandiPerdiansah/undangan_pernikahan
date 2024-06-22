@@ -11,3 +11,5 @@ galeri();
 bank();
 comentar();
 welcome();
+
+AOS.init();
