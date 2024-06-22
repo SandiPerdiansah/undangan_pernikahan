@@ -35,23 +35,23 @@ export const data = {
     galeri: [
         {
             id: 1,
-            img: '../../assets/images/1.jpg',
+            img: './assets/images/1.jpg',
         },
         {
             id: 2,
-            img: '../../assets/images/2.jpg',
+            img: './assets/images/2.jpg',
         },
         {
             id: 3,
-            img: '../../assets/images/3.jpg',
+            img: './assets/images/3.jpg',
         },
         {
             id: 4,
-            img: '../../assets/images/4.jpg',
+            img: './assets/images/4.jpg',
         },
         {
             id: 5,
-            img: '../../assets/images/5.jpg',
+            img: './assets/images/5.jpg',
         },
     ],
 
@@ -60,13 +60,13 @@ export const data = {
             id: 1,
             no: 12321,
             name: 'Ardiansah',
-            img: '../../assets/BNI_logo.svg.png'
+            img: './assets/BNI_logo.svg.png'
         },
         {
             id: 2,
             no: 12321,
             name: 'Ichaaa',
-            img: '../../assets/BRI_logo.svg.png'
+            img: './assets/BRI_logo.svg.png'
         },
     ]
 }

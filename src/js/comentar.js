@@ -43,7 +43,6 @@ export const comentar = () => {
         return color;
     };
 
-
     // time
     const getCurrentDateTime = () => {
         const now = new Date();
@@ -98,47 +97,54 @@ export const comentar = () => {
     });
 
     // click prev & next
-    let num = 1;
-    const commentsPerPage = 5;
-    let totalComments = 0;
+    let currentPage = 1;
+    let itemsPerPage = 5;
+    let startIndex = 0;
+    let endIndex = itemsPerPage;
 
     document.getElementById('next_page').addEventListener('click', async () => {
-        await loadComments(num + 1);
-    });
-
-    document.getElementById('prev_page').addEventListener('click', async () => {
-        if (num > 1) {
-            await loadComments(num - 1);
-        }
-    });
-
-    async function loadComments(page) {
-        listComentar.innerHTML = '<h1 style="margin: auto; font-size: 1rem">Loading..</h1>';
+        listComentar.innerHTML = '<h1 style="font-size: 1rem; margin: auto">Loading...</h1>'
         pageNumber.textContent = '..';
 
         try {
             const response = await api.getALLComentar();
             response.reverse();
-            totalComments = response.length;
 
-            const startIndex = (page - 1) * commentsPerPage;
-            const endIndex = startIndex + commentsPerPage;
-            const nextResponse = response.slice(startIndex, endIndex);
+            currentPage++;
+            startIndex = (currentPage - 1) * itemsPerPage;
+            endIndex = startIndex + itemsPerPage;
+
+            if (endIndex > response.length) {
+                endIndex = response.length;
+            }
 
             listComentar.innerHTML = '';
+            response.slice(startIndex, endIndex).map((item) => listComentar.innerHTML += itemListComentar(item));
+            pageNumber.textContent = currentPage.toString();
+        } catch (error) {
+            console.log(error)
+        }
+    });
 
-            if (nextResponse.length > 0) {
-                num = page;
-                pageNumber.textContent = `${num}`;
-                nextResponse.forEach(item => listComentar.innerHTML += itemListComentar(item));
-            } else {
-                listComentar.innerHTML = '<h1 style="margin: auto; font-size: 1rem">No more comments</h1>';
+    document.getElementById('prev_page').addEventListener('click', async () => {
+        listComentar.innerHTML = '<h1 style="font-size: 1rem; margin: auto">Loading...</h1>'
+        pageNumber.textContent = '..';
+
+        try {
+            const response = await api.getALLComentar();
+            if (currentPage > 1) {
+                currentPage--;
+                startIndex = (currentPage - 1) * itemsPerPage;
+                endIndex = startIndex + itemsPerPage;
+
+                listComentar.innerHTML = '';
+                response.slice(startIndex, endIndex).map((item) => listComentar.innerHTML += itemListComentar(item));
+                pageNumber.textContent = currentPage.toString();
             }
         } catch (error) {
-            console.log('Error :' + error.message);
-            listComentar.innerHTML = '<h1 style="margin: auto; font-size: 1rem">Error loading comments</h1>';
+            console.log(error)
         }
-    }
+    });
 
     // load data comentar
     document.addEventListener('DOMContentLoaded', async () => {
@@ -154,7 +160,7 @@ export const comentar = () => {
                 totalComentar.textContent = `Belum ada yang mengucapkan`;
             }
 
-            pageNumber.textContent = num.toString();
+            pageNumber.textContent = currentPage.toString();
         } catch (error) {
             console.log(error)
         }
