@@ -1,0 +1,1249 @@
+:root {
+    --primary-font-color: '#212529';
+
+    --transition-small: all .3s ease;
+}
+
+html {
+    scroll-behavior: smooth !important;
+    scrollbar-width: none !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif !important;
+    color: var(--primary-font-color);
+    overflow: hidden;
+}
+
+body.scrollable {
+    overflow: auto;
+}
+
+.sacramento {
+    font-family: Sacramento, cursive !important;
+}
+
+.arabic {
+    font-family: 'Noto Naskh Arabic', serif !important;
+}
+
+/*navbar*/
+nav {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f8f9fa;
+    z-index: 9999;
+}
+
+nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-font-color);
+    font-size: 1.2rem;
+    transition: var(--transition-small);
+    padding: 0.5rem 0;
+    width: 3.5rem;
+}
+
+nav a:hover, nav a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+nav a span {
+    font-size: 0.5rem;
+}
+/*navbar*/
+
+/*welcome*/
+.welcome {
+    width: 100%;
+    height: 100vh;
+    background-color: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    transition: all 2s ease;
+    opacity: 1;
+}
+
+.welcome.hide {
+    top: -100%;
+    z-index: -9999;
+    opacity: 0;
+}
+
+.welcome_image img {
+    border: 2px solid #fff;
+}
+
+.welcome p {
+    margin-bottom: 0.8rem;
+}
+
+.welcome h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.welcome button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: none;
+    margin-top: 1rem;
+    transition: var(--transition-small);
+}
+
+.welcome button i {
+    font-size: 1.4rem;
+}
+
+.welcome button:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+}
+    /*welcome*/
+
+main {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.hero h2, .welcome h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.hero .hero_image, .welcome_image {
+    width: 10rem;
+    border-radius: 50%;
+    margin: 2.4rem 0;
+}
+
+.hero .hero_image img, .bride .people .people_image img, .welcome_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1, .welcome h1 {
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+
+.hero h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.hero a {
+    margin: 1rem 0;
+    padding: 0.4rem 1rem;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--primary-font-color);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-small);
+}
+
+.hero a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.hero a i {
+    font-size: 1rem;
+}
+
+.hero .scroll_down {
+    text-align: center;
+}
+
+.hero .scroll_down i {
+    font-size: 2rem;
+    color: #8f8c8c;
+    animation: moveUpDown 3s infinite linear;
+}
+
+.hero .scroll_down p {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+}
+
+.hero .hero_waves {
+    width: 100%;
+    position: absolute;
+    bottom: -15rem;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+
+/* Hero Section */
+
+/*bride section*/
+.bride {
+    width: 100%;
+    padding: 14rem 8rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bride h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+.bride .bride_salam {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bride .bride_salam h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.bride .bride_salam i {
+    position: absolute;
+    right: 0;
+    top: -1rem;
+    font-size: 3.5rem;
+    color: #8f8c8c;
+    animation: moveUpDown 3s infinite linear;
+}
+
+.bride p {
+    margin-top: 1.4rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+.bride .love-bubble {
+    width: 100%;
+    text-align: start;
+    position: relative;
+    z-index: -10;
+    top: 3rem;
+
+}
+
+.bride .love-bubble i,
+.bride .love_bubble_people i,
+.love_bride,
+.love_gap_bride,
+.love_date, .love_galeri {
+    font-size: 3.5rem;
+    color: #8f8c8c;
+    animation: moveUpDown 3s infinite linear;
+}
+
+.bride .people {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bride .people .people_image {
+    width: 12rem;
+    border-radius: 50%;
+}
+
+.bride .people h1 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.bride .people h3 {
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+}
+
+.bride .people h4 {
+    font-weight: 400;
+}
+
+.bride span {
+    display: block;
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.bride .love_bubble_people {
+    position: absolute;
+    width: 100%;
+    height: 8rem;
+    z-index: -10;
+}
+
+.love_bubble_people i:nth-child(1) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.love_bubble_people i:nth-child(2) {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.love_bride {
+    position: absolute;
+    bottom: -6rem;
+    right: 0;
+}
+
+.love_date {
+    position: absolute;
+    top: 26rem;
+    right: 8rem;
+}
+
+/*bride section*/
+
+/*gap bride*/
+.gap_bride {
+    width: 100%;
+    padding: 4rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    position: relative;
+    margin-top: 6rem;
+}
+
+.gap_bride h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.gap_bride p {
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.gap_bride h3 {
+    font-weight: 400;
+}
+
+.gap_bride .gap_bride_waves_top {
+    position: absolute;
+    top: -12rem;
+    z-index: -10;
+}
+
+.gap_bride .gap_bride_waves_bottom {
+    position: absolute;
+    bottom: -12rem;
+    z-index: -10;
+}
+
+.love_gap_bride {
+    position: absolute;
+    left: 8rem;
+    top: 14rem;
+}
+
+/*gap bride*/
+
+/*Date section*/
+.date {
+    width: 100%;
+    padding: 12rem 8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.date h2, .galeri h2, .wishas h2, footer h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.date .date_time {
+    margin: 1.5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    gap: 10rem;
+}
+
+
+.date .date_time div {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.date .date_time div h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-right: 0.4rem;
+}
+
+.date .date_time + p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-align: center;
+}
+
+.date .date_time + p + div {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.date .date_time + p + div p {
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.date a, .copy {
+    padding: 0.4rem 1rem;
+    border: 1px solid #000;
+    border-radius: 50px;
+    color: #000;
+    transition: var(--transition-small);
+}
+
+.date a span {
+    font-size: 0.8rem;
+}
+
+.date a:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.date a + p {
+    font-weight: 400;
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.3rem;
+}
+
+/*Date section*/
+
+/*galeri section*/
+.galeri {
+    width: 100%;
+    padding: 4rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    position: relative;
+}
+
+.love_galeri {
+    position: absolute;
+    top: -2rem;
+    left: 2rem;
+    z-index: 99;
+}
+
+.galeri .container {
+    width: 100%;
+    padding: 1.4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    0 -1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: inherit;
+    position: relative;
+}
+
+.galeri .container .galeri_box {
+    width: 100%;
+    height: 40rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.galeri .container .galeri_box::-webkit-scrollbar {
+    display: none;
+}
+
+.galeri .container .galeri_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.galeri .container .pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 6rem;
+    right: 0;
+    left: 0;
+    gap: 0.5rem;
+}
+
+.galeri .container .pagination .pagination_item {
+    width: 1.5rem;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1px;
+}
+
+.galeri .container .pagination .pagination_item:hover {
+    cursor: pointer;
+}
+
+.galeri .container .pagination .pagination_item.active {
+    background-color: white;
+}
+
+.galeri .container .next, .prev {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-small);
+    z-index: 99;
+}
+
+.galeri .container button:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.galeri .container .prev {
+    top: 25rem;
+    left: 4rem;
+}
+
+.galeri .container .next {
+    top: 25rem;
+    right: 4rem;
+}
+
+.galeri .galeri_modal_button, .galeri .hide_modal {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    background: white;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    text-align: center;
+    transition: var(--transition-small);
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.galeri .galeri_modal_button:hover, .galeri_modal .hide_modal:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.galeri .galeri_modal {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 999;
+    overflow-y: auto;
+    transition: all .3s ease;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: bottom;
+}
+
+.galeri .galeri_modal.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.galeri .galeri_modal::-webkit-scrollbar {
+    display: none;
+}
+
+.galeri .galeri_modal .container_modal {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.galeri .galeri_modal .container_modal img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.galeri .hide_modal {
+    margin-top: 3rem;
+}
+
+/*galeri section*/
+
+/*wishas section*/
+.wishas {
+    width: 100%;
+    padding: 4rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.wishas .wishas_waves {
+    position: absolute;
+    top: -14rem;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+
+.wishas p {
+    font-weight: 400;
+    line-height: 1.3rem;
+    margin: 1rem 0;
+}
+
+.wishas .bank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.wishas .bank div {
+    width: 100%;
+    text-align: center;
+    flex-basis: 50%;
+    border-radius: 15px;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.wishas .bank div img {
+    width: 10rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+.wishas .bank div p {
+    font-weight: 400;
+}
+
+.wishas .copy {
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.wishas .copy:hover, .wishas .wishas_form form button:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.wishas .wishas_form, .wishas .comentar {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.wishas .wishas_form form {
+    width: 100%;
+    padding: 0 4rem 0;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.wishas .wishas_form form label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.wishas .wishas_form form input,
+.wishas .wishas_form form select,
+.wishas .wishas_form form textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #000;
+}
+
+.wishas .wishas_form form textarea {
+    min-height: 6rem;
+}
+
+.wishas .wishas_form form button {
+    margin: 1rem auto;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 0;
+    font-weight: bold;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition-small);
+}
+
+.wishas .comentar {
+    padding: 2rem 4rem;
+    max-height: 43rem;
+    overflow-y: hidden;
+}
+
+.wishas .total_comentar {
+    border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
+}
+
+.wishas .list_comentar {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 36rem;
+    overflow-y: hidden;
+}
+
+.wishas .list_comentar li {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.wishas .list_comentar li div:nth-child(1) {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    object-fit: cover;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.wishas .list_comentar li div:nth-child(2) {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    margin-top: -0.7rem;
+}
+
+.wishas .list_comentar li div:nth-child(2) span {
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+
+.wishas .list_comentar li div:nth-child(2) .tanggal {
+    margin-top: -0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.wishas .list_comentar li div:nth-child(2) p ~ p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+    text-align: start;
+}
+
+.wishas .pages {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.wishas .pages button {
+    background-color: inherit;
+    border: none;
+    padding: 0.5rem 1rem;
+    transition: var(--transition-small);
+}
+
+.wishas .pages button:nth-child(1) {
+    border-radius: 5px 0 0 5px;
+}
+
+.wishas .pages button:nth-child(1) ~ button {
+    border-radius: 0 5px 5px 0;
+}
+
+.wishas .pages button:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+}
+
+.wishas .pages .pages_no {
+    background-color: #d5d2d2;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wishas .wishas_waves_bottom {
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+
+/*wishas section*/
+
+/*audio*/
+.audio {
+    border: none;
+    font-size: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 6rem;
+    right: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transform-origin: center;
+    z-index: 999;
+}
+
+.audio.active {
+    animation: rotate 5s infinite;
+}
+/*audio*/
+
+/*footer*/
+footer {
+    width: 100%;
+    padding: 4rem 8rem 0;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+footer p {
+    line-height: 1.3rem;
+    font-weight: 400;
+}
+
+footer h2 {
+    margin: 1rem 0;
+}
+
+footer h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+footer .footer_copyright {
+    margin-top: 1rem;
+    border-top: 1px solid #000;
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+footer .footer_copyright p {
+    font-weight: 400;
+}
+
+footer .footer_copyright div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+footer .footer_copyright div i {
+    font-size: 1.2rem;
+}
+
+/*footer*/
+
+
+/*Media queries*/
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    /*Hero section*/
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero .hero_image {
+        width: 10rem;
+        margin: 2rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero h3 {
+        font-size: 1rem;
+    }
+
+    .hero .scroll_down i {
+        font-size: 1.6rem;
+    }
+
+    .hero .scroll_down p {
+        font-size: 0.6rem;
+    }
+
+    .hero .hero_waves {
+        bottom: -4rem;
+    }
+
+    /*Hero section*/
+    /*bride section*/
+    .bride, .gap_bride, .date, .galeri, .wishas, footer {
+        padding: 6rem 1.4rem;
+    }
+
+    .bride h2 {
+        margin-bottom: 1.4rem;
+        text-align: center;
+    }
+
+
+    .bride .bride_salam h3 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .bride p {
+        margin-top: 0;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .bride .love-bubble i,
+    .bride .love_bubble_people i,
+    .love_bride,
+    .bride .bride_salam i,
+    .gap_bride .love_gap_bride,
+    .love_date, .love_galeri {
+        font-size: 2.4rem;
+    }
+
+    .love_bride {
+        bottom: -2rem;
+    }
+
+    /*bride section*/
+    /*gap bride*/
+    .gap_bride {
+        margin-top: 0;
+    }
+
+    .gap_bride .gap_bride_waves_top {
+        top: -4rem;
+    }
+
+    .gap_bride .gap_bride_waves_bottom {
+        bottom: -4rem;
+    }
+
+    .gap_bride .love_gap_bride {
+        left: 1.4rem;
+        top: 25rem;
+    }
+
+    .gap_bride p {
+        font-size: 0.8rem;
+    }
+
+    .gap_bride h3 {
+        font-size: 1rem;
+    }
+
+    /*gap bride*/
+    /*date*/
+    .date .date_time {
+        gap: 1rem;
+    }
+
+    .date .date_time div h1 {
+        font-size: 1rem;
+        margin-right: 0.3rem;
+    }
+
+    .date .date_time div p {
+        font-size: 0.8rem;
+    }
+
+    .date .date_time + p {
+        font-size: 0.8rem;
+    }
+
+    .love_date {
+        right: 1.4rem;
+        top: 20rem;
+    }
+
+    .date a + p {
+        font-size: 0.8rem;
+    }
+
+    /*date*/
+    /*galeri*/
+    .galeri {
+        margin-top: -8rem;
+    }
+
+    .galeri .container {
+        padding: 1rem;
+    }
+
+    .galeri .container .galeri_box {
+        height: 12rem;
+        margin-top: 1rem;
+    }
+
+    .galeri .container .pagination {
+        bottom: 4.6rem;
+        gap: 0.4rem;
+    }
+
+    .galeri .container .pagination .pagination_item {
+        width: 0.8rem;
+    }
+
+    .galeri .container .prev, .galeri .container .next {
+        font-size: 2.5rem;
+    }
+
+    .galeri .container .prev {
+        top: 10rem;
+        left: 1rem;
+    }
+
+    .galeri .container .next {
+        top: 10rem;
+        right: 1rem;
+    }
+
+    .galeri .galeri_modal_button, .galeri .hide_modal {
+        margin: 1rem auto 0;
+    }
+
+    .galeri .galeri_modal {
+        padding: 1.4rem;
+    }
+
+    .galeri .galeri_modal .container_modal {
+        width: 100%;
+        padding: 2rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .galeri .galeri_modal .container_modal img {
+        width: 100%;
+    }
+
+    .love_galeri {
+        top: -1rem;
+        left: 1rem;
+    }
+
+    /*galeri*/
+    /*wishas*/
+    .wishas .wishas_waves {
+        top: -4.3rem;
+    }
+
+    .wishas .bank {
+        flex-direction: column;
+    }
+
+    .wishas .bank div {
+        width: 100%;
+    }
+
+    .wishas .wishas_form {
+        /*margin-top: 1rem;*/
+    }
+
+    .wishas .wishas_form form {
+        padding: 0 1.4rem;
+    }
+
+    .wishas .wishas_form form {
+        margin-top: 0;
+    }
+
+    .wishas .comentar {
+        padding: 2rem 1.4rem;
+    }
+
+    .wishas .list_comentar {
+        margin-top: 1rem;
+    }
+
+    .wishas.list_comentar li div:nth-child(2) {
+        max-width: 90%;
+    }
+
+    .wishas .wishas_waves_bottom {
+        bottom: -5rem;
+    }
+
+    /*wishas*/
+    /*footer*/
+    footer {
+        padding-bottom: 0;
+    }
+
+    footer h2 {
+        font-size: 1.8rem;
+    }
+
+    /*footer*/
+}
+
+/*keyframes*/
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(-0.8rem);
+    }
+    50% {
+        transform: translateY(0.8rem);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
