@@ -16,8 +16,17 @@ export const date = () => {
         return new Date(now.getTime() + days * 86400000 + hours * 3600000 + minutes * 60000 + seconds * 1000);
     };
 
+    const getEndTime = () => {
+        let endTime = localStorage.getItem('countdownEndTime');
+        if (!endTime) {
+            endTime = calculateEndTime(countdownTime).toISOString();
+            localStorage.setItem('countdownEndTime', endTime);
+        }
+        return new Date(endTime);
+    };
+
     const startCountdown = () => {
-        const endTime = calculateEndTime(countdownTime);
+        const endTime = getEndTime();
 
         const updateCountdown = () => {
             const now = new Date().getTime();
@@ -39,6 +48,7 @@ export const date = () => {
                 hoursElement.innerText = '0';
                 minutesElement.innerText = '0';
                 secondsElement.innerText = '0';
+                localStorage.removeItem('countdownEndTime');
             }
         };
 
@@ -46,5 +56,5 @@ export const date = () => {
         const intervalId = setInterval(updateCountdown, 1000);
     };
 
-     startCountdown();
+    startCountdown();
 };
