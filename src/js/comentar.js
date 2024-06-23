@@ -15,14 +15,26 @@ export const comentar = () => {
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
 
+        const differenceDate = calculateDifferenceDateNow(data.date);
+        let myDate = "";
+        if(differenceDate.days < 1){
+            if(differenceDate.hours < 1){
+                myDate = `${differenceDate.minutes} menit yang lalu`;
+            }else{
+                myDate = `${differenceDate.hours} jam yang lalu`;
+            }
+        }else{
+            myDate = `${differenceDate.days} hari yang lalu`;
+        }
+
         return `<li data-id=${data.id}>
                 <div style="background-color: ${data.color}">
                     ${data.name.split('')[0].toUpperCase()}
                 </div>
                 <div>
                     <p>${formattedName}</p>
-                    <span class="tanggal">Tanggal : ${data.date}</span>
-                    <span>Status : ${data.status}</span>
+                    <span class="tanggal"> ${myDate}</span>
+                    <span>${data.status}</span>
                     <p>${data.comment}</p>
                 </div>
             </li>`;
@@ -51,8 +63,8 @@ export const comentar = () => {
         let day = now.getDate().toString().padStart(2, '0');
         let hours = now.getHours().toString().padStart(2, '0');
         let minutes = now.getMinutes().toString().padStart(2, '0');
-        let seconds = now.getSeconds().toString().padStart(2, '0');
-        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        //let seconds = now.getSeconds().toString().padStart(2, '0');
+        return `${year}-${month}-${day} ${hours}:${minutes}`;
     };
 
     // id
@@ -167,4 +179,28 @@ export const comentar = () => {
             console.log(error)
         }
     });
+
+    function calculateDifferenceDateNow(myDate) {
+        // Konversi tanggal menjadi objek Date
+        const d1 = new Date(myDate);
+        const d2 = new Date();
+
+        // Dapatkan selisih dalam milidetik
+        const diffInMs = Math.abs(d2 - d1);
+
+        // Konversi milidetik ke hari, jam, dan menit
+        const msInMinute = 60 * 1000;
+        const msInHour = 60 * msInMinute;
+        const msInDay = 24 * msInHour;
+
+        const days = Math.floor(diffInMs / msInDay);
+        const hours = Math.floor((diffInMs % msInDay) / msInHour);
+        const minutes = Math.floor((diffInMs % msInHour) / msInMinute);
+
+        return {
+            days: days,
+            hours: hours,
+            minutes: minutes
+        };
+    }
 };

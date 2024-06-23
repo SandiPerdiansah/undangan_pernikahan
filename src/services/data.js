@@ -60,7 +60,7 @@ export const data = {
             id: 1,
             no: 12321,
             name: 'Ardiansah',
-            img: './assets/BNI_logo.svg.png'
+            img: './assets/BCA_logo.png'
         },
         {
             id: 2,

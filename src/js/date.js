@@ -26,7 +26,7 @@ export const date = () => {
     };
 
     const startCountdown = () => {
-        const endTime = getEndTime();
+        const endTime = new Date("2024-11-14T00:00:00");;//getEndTime();
 
         const updateCountdown = () => {
             const now = new Date().getTime();
