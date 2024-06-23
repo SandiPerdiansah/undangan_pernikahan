@@ -132,6 +132,8 @@ export const comentar = () => {
 
         try {
             const response = await api.getALLComentar();
+            response.reverse();
+
             if (currentPage > 1) {
                 currentPage--;
                 startIndex = (currentPage - 1) * itemsPerPage;

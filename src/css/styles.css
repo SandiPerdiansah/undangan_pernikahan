@@ -20,11 +20,12 @@ html {
 body {
     font-family: 'Josefin Sans', sans-serif !important;
     color: var(--primary-font-color);
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 body.scrollable {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .sacramento {
@@ -76,6 +77,7 @@ nav a span {
 .welcome {
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
     background-color: #212529;
     display: flex;
     align-items: center;
@@ -87,7 +89,7 @@ nav a span {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999;
+    z-index: 999999;
     transition: all 2s ease;
     opacity: 1;
 }
@@ -735,7 +737,7 @@ main {
     background-color: white;
 }
 
-.wishas .copy:hover, .wishas .wishas_form form button:hover {
+.wishas .copy:hover{
     color: #fff;
     background-color: #000;
 }
@@ -783,8 +785,8 @@ main {
     text-align: center;
     padding: 0.6rem 0;
     font-weight: bold;
-    background-color: #fff;
-    border: 1px solid #000;
+    background-color: #000;
+    border: 1px solid #fff;
     border-radius: 5px;
     cursor: pointer;
     transition: var(--transition-small);
@@ -852,6 +854,10 @@ main {
 .wishas .list_comentar li div:nth-child(2) .tanggal {
     margin-top: -0.8rem;
     margin-bottom: 0.2rem;
+}
+
+.wishas .list_comentar li div:nth-child(2) p {
+    text-align: start;
 }
 
 .wishas .list_comentar li div:nth-child(2) p ~ p {

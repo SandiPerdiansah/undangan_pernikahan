@@ -1,4 +1,4 @@
-import { audio } from "./audio.js";
+import {audio} from "./audio.js";
 
 export const welcome = () => {
     const welcome = document.querySelector('.welcome');
@@ -32,8 +32,15 @@ export const welcome = () => {
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-        const params = getQueryParameter('to') || 'Teman-teman semua';
-        to.textContent = decodeURIComponent(params);
+        const name = document.getElementById('name');
+        const params = getQueryParameter('to');
+
+        if (params) {
+            to.textContent = decodeURIComponent(params);
+            name.value = params;
+        } else {
+            to.textContent = 'Teman-teman semua';
+        }
         audio(btnAudio, isPlaying, music);
     });
 }
