@@ -786,7 +786,7 @@ main {
     padding: 0.6rem 0;
     font-weight: bold;
     background-color: #000;
-    border: 1px solid #fff;
+    color: #fff;
     border-radius: 5px;
     cursor: pointer;
     transition: var(--transition-small);
