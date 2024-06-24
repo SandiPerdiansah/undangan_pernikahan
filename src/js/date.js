@@ -4,29 +4,8 @@ export const date = () => {
     const minutesElement = document.getElementById('minutes');
     const secondsElement = document.getElementById('second');
 
-    const countdownTime = {
-        days: 2,
-        hours: 0,
-        minutes: 0,
-        seconds: 0
-    };
-
-    const calculateEndTime = ({days, hours, minutes, seconds}) => {
-        const now = new Date();
-        return new Date(now.getTime() + days * 86400000 + hours * 3600000 + minutes * 60000 + seconds * 1000);
-    };
-
-    const getEndTime = () => {
-        let endTime = localStorage.getItem('countdownEndTime');
-        if (!endTime) {
-            endTime = calculateEndTime(countdownTime).toISOString();
-            localStorage.setItem('countdownEndTime', endTime);
-        }
-        return new Date(endTime);
-    };
-
     const startCountdown = () => {
-        const endTime = new Date("2024-11-14T00:00:00");;//getEndTime();
+        const endTime = new Date("2024-11-14T00:00:00");
 
         const updateCountdown = () => {
             const now = new Date().getTime();

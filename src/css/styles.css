@@ -963,11 +963,6 @@ footer h2 {
     margin: 1rem 0;
 }
 
-footer h3 {
-    font-size: 2rem;
-    font-weight: 400;
-}
-
 footer .footer_copyright {
     margin-top: 1rem;
     border-top: 1px solid #000;
@@ -981,17 +976,6 @@ footer .footer_copyright {
 
 footer .footer_copyright p {
     font-weight: 400;
-}
-
-footer .footer_copyright div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.2rem;
-}
-
-footer .footer_copyright div i {
-    font-size: 1.2rem;
 }
 /*footer*/
 
@@ -1207,8 +1191,8 @@ footer .footer_copyright div i {
     .wishas .wishas_waves_bottom {
         bottom: -5rem;
     }
-
     /*wishas*/
+
     /*footer*/
     footer {
         padding-top: 2rem;
@@ -1218,7 +1202,6 @@ footer .footer_copyright div i {
     footer h2 {
         font-size: 1.8rem;
     }
-
     /*footer*/
 }
 
