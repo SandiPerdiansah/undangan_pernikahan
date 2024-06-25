@@ -4,7 +4,7 @@ export const data = {
             id: 1,
             teks: 'Home',
             icons: 'bx bxs-home-heart',
-            path: '#',
+            path: '#home',
         },
         {
             id: 2,

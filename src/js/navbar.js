@@ -1,4 +1,4 @@
-import {data} from "../services/data.js";
+import { data } from "../services/data.js";
 
 export const navbar = () => {
     const navbar = document.querySelector('.navbar');
@@ -9,9 +9,9 @@ export const navbar = () => {
 
     function itemNavbar(data) {
         return `<a href="${data.path}" data-href="${data.path}">
-                    <i class="${data.icons}"></i>
-                    <span>${data.teks}</span>
-                </a>`;
+                <i class="${data.icons}"></i>
+                <span>${data.teks}</span>
+            </a>`;
     }
 
     const links = navbar.querySelectorAll('a');
@@ -38,7 +38,6 @@ export const navbar = () => {
             }
         });
     });
-
 
     document.addEventListener('scroll', () => {
         if (ignoreScrollEvent) return;

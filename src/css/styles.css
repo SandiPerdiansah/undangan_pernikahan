@@ -182,24 +182,51 @@ main {
     font-weight: 500;
 }
 
+
+.hero .date_time {
+    margin: 1.5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    gap: 1rem;
+}
+
+
+.hero .date_time div {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+}
+
+.hero .date_time div h1 {
+    font-size: 1rem;
+}
+
+.hero .date_time div p {
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+}
+
 .hero a {
-    margin: 1rem 0;
+    margin: 0 0 1rem;
     padding: 0.4rem 1rem;
     border: 1px solid #000;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    color: var(--primary-font-color);
+    color: #fff;
+    background-color: #000;
     border-radius: 50px;
     font-size: 0.8rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: var(--transition-small);
-}
-
-.hero a:hover {
-    background-color: #000;
-    color: #fff;
 }
 
 .hero a i {
@@ -235,7 +262,7 @@ main {
 /*bride section*/
 .bride {
     width: 100%;
-    padding: 14rem 8rem 4rem;
+    padding: 14rem 8rem 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,6 +342,7 @@ main {
 
 .bride .people h4 {
     font-weight: 400;
+    margin-top: 0.6rem;
 }
 
 .bride span {
@@ -412,12 +440,13 @@ main {
 /*Date section*/
 .date {
     width: 100%;
-    padding: 12rem 8rem 0;
+    padding: 12rem 8rem 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
+    text-align: center;
 }
 
 .date h2, .galeri h2, .wishas h2, footer h2 {
@@ -426,51 +455,16 @@ main {
     text-align: center;
 }
 
-.date .date_time {
-    margin: 1.5rem 0;
-    width: 100%;
+.date .time {
+    margin-top: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 0;
-    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 50px;
-    gap: 10rem;
-}
-
-
-.date .date_time div {
-    display: inherit;
-    align-items: inherit;
-    justify-content: inherit;
-}
-
-.date .date_time div h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-right: 0.4rem;
-}
-
-.date .date_time + p {
-    font-size: 1rem;
-    line-height: 1.3rem;
-    text-align: center;
-}
-
-.date .date_time + p + div {
-    margin-top: 2rem;
-    display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 3rem;
 }
 
-.date .date_time + p + div p {
-    font-weight: 400;
-    margin-top: 1rem;
-}
-
-.date a, .copy {
+.copy {
     padding: 0.4rem 1rem;
     border: 1px solid #000;
     border-radius: 50px;
@@ -478,14 +472,20 @@ main {
     transition: var(--transition-small);
 }
 
+.date a {
+    color: #fff;
+    background-color: #000;
+    padding: 0.4rem 1rem;
+    border: 1px solid #000;
+    border-radius: 50px;
+    transition: var(--transition-small);
+    margin-top: 2rem;
+}
+
 .date a span {
     font-size: 0.8rem;
 }
 
-.date a:hover {
-    background-color: black;
-    color: #fff;
-}
 
 .date a + p {
     font-weight: 400;
@@ -493,7 +493,6 @@ main {
     text-align: center;
     line-height: 1.3rem;
 }
-
 /*Date section*/
 
 /*galeri section*/
@@ -522,6 +521,7 @@ main {
     0 -1px 1px rgba(0, 0, 0, 0.1);
     border-radius: inherit;
     position: relative;
+    margin-top: 6rem;
 }
 
 .galeri .container .galeri_box {
@@ -1059,16 +1059,6 @@ footer .footer_copyright p {
     /*gap bride*/
 
     /*date*/
-    .date .date_time {
-        gap: 1rem;
-    }
-
-    .date .date_time div h1 {
-        font-size: 1rem;
-        margin-right: 0.3rem;
-    }
-
-
     .love_date {
         right: 1.4rem;
         top: 27rem;
@@ -1077,12 +1067,11 @@ footer .footer_copyright p {
     .date a + p {
         font-size: 0.8rem;
     }
-
     /*date*/
+
     /*galeri*/
     .galeri {
         margin-top: -6rem;
-        /*padding-top: 12rem;*/
     }
 
     .galeri .container {
