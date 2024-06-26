@@ -283,7 +283,7 @@ main {
     position: relative;
 }
 
-.bride .bride_salam h3 {
+.bride .bride_salam h3, footer h3 {
     font-size: 2rem;
     font-weight: 500;
 }
