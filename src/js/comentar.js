@@ -21,10 +21,10 @@ export const comentar = () => {
             if(differenceDate.hours < 1){
                 myDate = `${differenceDate.minutes} menit yang lalu`;
             }else{
-                myDate = `${differenceDate.hours} jam yang lalu`;
+                myDate = `${differenceDate.hours} jam, ${differenceDate.minutes} menit yang lalu`;
             }
         }else{
-            myDate = `${differenceDate.days} hari yang lalu`;
+            myDate = `${differenceDate.days} hari, ${differenceDate.hours} jam yang lalu`;
         }
 
         return `<li data-id=${data.id}>
